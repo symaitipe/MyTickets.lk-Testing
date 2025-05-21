@@ -7,10 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class MyTicketsLoginSubmission extends AbstractPage{
 
 
-    public final static By signInButton = By.cssSelector("[href='/login']");
-    public final static By emailInput = By.name("email");
-    public final static By passwordInput = By.name("password");
-    public final static By submitLoginButton = By.cssSelector("button[type='submit']");
+    private final static By signInButton = By.cssSelector("[href='/login']");
+    private final static By passwordInput = By.name("password");
+    private final static By emailInput = By.name("email");
+    private final static By submitLoginButton = By.cssSelector("button[type='submit']");
 
     public MyTicketsLoginSubmission(WebDriver webDriver){
         super(webDriver);

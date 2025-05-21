@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class MyTicketsLoginResults extends AbstractPage{
 
 
-    final static By targetedChangeVisibleArea = By.cssSelector("nav button span.hidden.lg\\:block");
+    private final static By targetedChangeVisibleArea = By.cssSelector("nav button span.hidden.lg\\:block");
 
     public MyTicketsLoginResults(WebDriver webDriver) {
         super(webDriver);
