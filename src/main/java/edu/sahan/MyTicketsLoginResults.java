@@ -3,21 +3,26 @@ package edu.sahan;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MyTicketsLoginResults extends AbstractPage{
+import java.time.Duration;
 
+
+public class MyTicketsLoginResults {
+
+
+    private final WebDriverWait wait;
 
     private final static By targetedChangeVisibleArea = By.cssSelector("nav button span.hidden.lg\\:block");
 
     public MyTicketsLoginResults(WebDriver webDriver) {
-        super(webDriver);
+        wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
+
     }
 
 
     public String getResults(){
-        // Wait for the username to appear in the navbar
-        return getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(targetedChangeVisibleArea)).getText();
-
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(targetedChangeVisibleArea)).getText();
     }
 
 
