@@ -12,13 +12,13 @@ public class MyTicketsLogoutPage {
     WebDriver webDriver;
     WebDriverWait webDriverWait;
 
+    private final static By logoutButton = By.xpath("//div[contains(text(),'Log out')]");
+
     public MyTicketsLogoutPage(WebDriver webDriver){
         this.webDriver = webDriver;
         this.webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
     }
 
-
-    private final static By logoutButton = By.xpath("//div[contains(text(),'Log out')]");
 
     public MyTicketsLogoutResults submitLogout(){
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(logoutButton)).click();

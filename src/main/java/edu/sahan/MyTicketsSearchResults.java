@@ -13,6 +13,7 @@ public class MyTicketsSearchResults {
 
     private final static By searchResultsTitleElements = By.cssSelector("p[class='font-semibold body truncate']");
     private final static By searchResultsVenueElements = By.cssSelector("p[class='small truncate']");
+    private final static By searchResultsNothingFoundElement = By.cssSelector("p[class='body']");;
 
 
     private final WebDriverWait webDriverWait;
@@ -40,7 +41,6 @@ public class MyTicketsSearchResults {
     }
 
     public WebElement getSearchByInvalidInputResults(){
-        By searchResultsNothingFoundElement = By.cssSelector("p[class='body']");
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(searchResultsNothingFoundElement));
     }
 

@@ -15,14 +15,22 @@ public class MyTicketsLoginResults {
 
     private final static By targetedChangeVisibleArea = By.cssSelector("nav button span.hidden.lg\\:block");
 
+    private final static By alertArea = By.xpath("//div[@data-title and text()='Invalid credentials']");
+
+
     public MyTicketsLoginResults(WebDriver webDriver) {
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
 
     }
 
 
-    public String getResults(){
+    public String getSuccessResults(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(targetedChangeVisibleArea)).getText();
+    }
+
+
+    public String getErrorMessage(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(alertArea)).getText();
     }
 
 
