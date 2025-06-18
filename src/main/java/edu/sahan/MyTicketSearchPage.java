@@ -11,18 +11,18 @@ public class MyTicketSearchPage {
 
     private final static By  searchField  = By.cssSelector("input[name='search']");
     private final static By searchButton = By.xpath("//button[contains(text(),'Search')]");
-    private WebDriver webDriver;
-    private WebDriverWait wait;
+    private final WebDriver webDriver;
+    private final WebDriverWait wait;
 
     public MyTicketSearchPage(WebDriver webDriver){
         this.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
     }
 
-    public SearchResults searchByVenue(String venue) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(searchField)).sendKeys(venue);
+    public MyTicketsSearchResults searchByText(String searchText) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchField)).sendKeys(searchText);
         webDriver.findElement(searchButton).click();
-        return new SearchResults(webDriver);
+        return new MyTicketsSearchResults(webDriver);
     }
 
 }

@@ -23,7 +23,7 @@ public class AbstractTest {
 
         driver.get("https://mytickets.lk/");
         driver.manage().window().fullscreen();
-        System.out.println("Page title: " + driver.getTitle());
+
 
 
         homePage = new HomePage(driver);

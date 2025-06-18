@@ -12,10 +12,10 @@ public class SearchByVenueTest extends AbstractTest{
     @Test
     public void searchByVenue(){
          MyTicketSearchPage searchPage = homePage.goToSearhPage();
-          SearchResults searchResults = searchPage.searchByVenue("Lakshapana");
-          List<WebElement> results =  searchResults.getSearchResults();
+          MyTicketsSearchResults searchResults = searchPage.searchByText(SearchDictionary.searchVenue);
+          List<WebElement> results =  searchResults.getSearchByVenueResults();
             for (WebElement result : results) {
-                assertTrue(result.getText().contains("Lakshapana"));
+                assertTrue(result.getText().contains(SearchDictionary.searchVenue));
             }
 
     }
