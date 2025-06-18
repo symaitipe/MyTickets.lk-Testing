@@ -16,12 +16,15 @@ public class HomePage {
 
     private final static By userButton = By.xpath("//span[contains(text(),'Sahan')]");
 
+    private final static By searchField = By.cssSelector("input[name='search']");
+
     public HomePage(WebDriver webDriver){
         this.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
     }
 
 
+    //============= Login Logout ===========================================
     public MyTicketsLoginPage goToLoginPage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInButton)).click();
         return new MyTicketsLoginPage(webDriver);
@@ -31,5 +34,12 @@ public class HomePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(userButton)).click();
         return new MyTicketsLogoutPage(webDriver);
     }
+
+    //=============  Search ===========================================
+    public MyTicketSearchPage goToSearhPage(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchField));
+        return new MyTicketSearchPage(webDriver);
+    }
+
 
 }

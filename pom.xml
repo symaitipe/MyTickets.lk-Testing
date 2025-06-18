@@ -29,5 +29,13 @@
       <artifactId>selenium-java</artifactId>
       <version>4.32.0</version>
     </dependency>
+
+    <!-- CDP v137 DevTools Support -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v137 -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-devtools-v137</artifactId>
+      <version>4.33.0</version>
+    </dependency>
   </dependencies>
 </project>
