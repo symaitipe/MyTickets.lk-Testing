@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class MyTicketsSearchResults {
+public class SearchResults {
 
     private final static By searchResultsTitleElements = By.cssSelector("p[class='font-semibold body truncate']");
     private final static By searchResultsVenueElements = By.cssSelector("p[class='small truncate']");
@@ -18,7 +18,7 @@ public class MyTicketsSearchResults {
 
     private final WebDriverWait webDriverWait;
 
-    public MyTicketsSearchResults(WebDriver webDriver){
+    public SearchResults(WebDriver webDriver){
         this.webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
     }
 

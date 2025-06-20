@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MyTicketsLogoutResults {
+public class LogoutResults {
 
     private final WebDriverWait wait;
 
     private final static By targetedChangeVisibleArea = By.xpath("//a[contains(text(),'Sign In')]");
 
-    public MyTicketsLogoutResults(WebDriver webDriver) {
+    public LogoutResults(WebDriver webDriver) {
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
 
     }

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class MyTicketsLoginPage{
+public class LoginPage {
 
     private final WebDriver webDriver;
     private final WebDriverWait wait;
@@ -18,16 +18,16 @@ public class MyTicketsLoginPage{
     private final static By emailInput = By.name("email");
     private final static By submitLoginButton = By.cssSelector("button[type='submit']");
 
-    public MyTicketsLoginPage(WebDriver webDriver){
+    public LoginPage(WebDriver webDriver){
         this.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
     }
 
-    public MyTicketsLoginResults submitLoginDetails(String email, String password){
+    public LoginResults submitLoginDetails(String email, String password){
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput)).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordInput)).sendKeys(password);
         wait.until(ExpectedConditions.visibilityOfElementLocated(submitLoginButton)).click();
-        return new MyTicketsLoginResults(webDriver);
+        return new LoginResults(webDriver);
     }
 
 

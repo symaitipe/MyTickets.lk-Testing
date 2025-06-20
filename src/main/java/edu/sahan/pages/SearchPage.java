@@ -7,22 +7,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MyTicketSearchPage {
+public class SearchPage {
 
     private final static By  searchField  = By.cssSelector("input[name='search']");
     private final static By searchButton = By.xpath("//button[contains(text(),'Search')]");
     private final WebDriver webDriver;
     private final WebDriverWait wait;
 
-    public MyTicketSearchPage(WebDriver webDriver){
+    public SearchPage(WebDriver webDriver){
         this.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
     }
 
-    public MyTicketsSearchResults searchByText(String searchText) {
+    public SearchResults searchByText(String searchText) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchField)).sendKeys(searchText);
         webDriver.findElement(searchButton).click();
-        return new MyTicketsSearchResults(webDriver);
+        return new SearchResults(webDriver);
     }
 
 }

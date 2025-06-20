@@ -2,7 +2,6 @@ package edu.sahan.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,20 +28,20 @@ public class HomePage {
 
 
     //============= Login Logout ===========================================
-    public MyTicketsLoginPage goToLoginPage(){
+    public LoginPage goToLoginPage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInButton)).click();
-        return new MyTicketsLoginPage(webDriver);
+        return new LoginPage(webDriver);
     }
 
-    public MyTicketsLogoutPage goToLogoutPage(){
+    public LogoutPage goToLogoutPage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(userButton)).click();
-        return new MyTicketsLogoutPage(webDriver);
+        return new LogoutPage(webDriver);
     }
 
     //=============  Search ===========================================
-    public MyTicketSearchPage goToSearhPage(){
+    public SearchPage goToSearhPage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchField));
-        return new MyTicketSearchPage(webDriver);
+        return new SearchPage(webDriver);
     }
 
 

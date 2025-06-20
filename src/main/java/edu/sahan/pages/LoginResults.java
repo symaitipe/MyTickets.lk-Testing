@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class MyTicketsLoginResults {
+public class LoginResults {
 
 
     private final WebDriverWait wait;
@@ -18,7 +18,7 @@ public class MyTicketsLoginResults {
     private final static By alertArea = By.xpath("//div[@data-title and text()='Invalid credentials']");
 
 
-    public MyTicketsLoginResults(WebDriver webDriver) {
+    public LoginResults(WebDriver webDriver) {
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
 
     }
