@@ -1,5 +1,9 @@
-package edu.sahan;
+package edu.sahan.search;
 
+import edu.sahan.SearchDictionary;
+import edu.sahan.base.AbstractTest;
+import edu.sahan.pages.MyTicketSearchPage;
+import edu.sahan.pages.MyTicketsSearchResults;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
@@ -8,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SearchByInputTest extends AbstractTest{
+public class SearchByInputTest extends AbstractTest {
 
     @Test
     public void searchByArtist() {

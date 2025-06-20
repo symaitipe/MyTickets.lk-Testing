@@ -1,5 +1,6 @@
-package edu.sahan;
+package edu.sahan.base;
 
+import edu.sahan.pages.HomePage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInstance;
@@ -12,7 +13,7 @@ public class AbstractTest {
 
 
     WebDriver driver;
-    protected  HomePage homePage;
+    protected HomePage homePage;
 
 
 

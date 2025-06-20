@@ -1,4 +1,4 @@
-package edu.sahan;
+package edu.sahan.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

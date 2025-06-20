@@ -1,6 +1,12 @@
-package edu.sahan;
+package edu.sahan.login_logout;
 
 
+import edu.sahan.Secrets;
+import edu.sahan.base.AbstractTest;
+import edu.sahan.pages.MyTicketsLoginPage;
+import edu.sahan.pages.MyTicketsLoginResults;
+import edu.sahan.pages.MyTicketsLogoutPage;
+import edu.sahan.pages.MyTicketsLogoutResults;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
