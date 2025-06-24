@@ -24,7 +24,7 @@ public class RegisterPage {
     private final static By contactNumberField = By.id(":Rqqjtt5ja:-form-item");
     private final static By NICField = By.name("id");
     // Error message element
-    private final static By NICErrorMessage = By.cssSelector("[id*='form-item-message']");
+    private final static By NICErrorMessage = By.xpath("//p[text()=\"Please enter a valid NIC number that corresponds to your country\"]");
 
     private final static By countryField = By.id("country");
     private final static By emailField = By.name("email");
