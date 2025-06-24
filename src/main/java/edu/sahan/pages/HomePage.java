@@ -21,6 +21,9 @@ public class HomePage {
 
     private final static By navBar = By.cssSelector("div[class='container relative flex justify-between items-center max-w-screen-xl py-4']");
 
+    private final static By registerButton = By.cssSelector("[href='/register']");
+
+
     public HomePage(WebDriver webDriver){
         this.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, Duration.ofSeconds(15));
@@ -49,6 +52,12 @@ public class HomePage {
     public NavigationBar getNavBar() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(navBar));
         return new NavigationBar(webDriver);
+    }
+
+    //=============  Register ===========================================
+    public RegisterPage getRegisterPage() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(registerButton)).click();
+        return new RegisterPage(webDriver);
     }
 
 
