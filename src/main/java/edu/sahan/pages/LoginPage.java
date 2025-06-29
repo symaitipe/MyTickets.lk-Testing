@@ -38,7 +38,12 @@ public class LoginPage {
         return !loginButton.isEnabled();
     }
 
-
+    public void clearFields() {
+        WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput));
+        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(passwordInput));
+        emailField.clear();
+        passwordField.clear();
+    }
 
 }
 
